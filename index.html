@@ -112,6 +112,15 @@ footer{border-top:1px solid var(--line);margin-top:44px;padding-top:20px;color:v
 footer h4{color:var(--muted);margin:0 0 8px;font-size:13px;text-transform:uppercase;letter-spacing:.08em}
 footer ul{margin:0;padding-left:18px}footer li{margin:2px 0}
 footer .made{text-align:center;margin-top:18px;font-style:italic}
+.stay{display:flex;gap:14px;background:var(--bg);border:1px solid var(--line);border-radius:12px;overflow:hidden;margin:10px 0}
+.stayimg{width:200px;flex:none;background-size:cover;background-position:center;min-height:150px}
+.staybody{padding:12px 14px;flex:1}
+.staybody h4{margin:0 0 8px;font-size:15px}
+table.mini{font-size:13px;width:100%;border-collapse:collapse}
+table.mini th{width:34%;white-space:nowrap;text-align:left;font-weight:600;color:var(--muted);padding:3px 8px 3px 0;vertical-align:top}
+table.mini td{padding:3px 0;vertical-align:top}
+.parkline{margin:8px 0 0;font-size:13px;color:var(--muted)}
+@media(max-width:560px){.stay{flex-direction:column}.stayimg{width:100%;height:170px;min-height:0}}
 @media(max-width:560px){.mapwrap iframe{height:320px}}
 @media print{nav.menu{display:none}.view{display:block!important}.dayview{display:block!important}.daycard,.card{box-shadow:none;break-inside:avoid}header.hero{background:#12455f}}</style>
 <header class="hero"><div class="k">Családi road trip · 6 nap · 5 éjszaka</div>
@@ -150,29 +159,10 @@ A köztes okt. 24–29. ablak a legüresebb szezon, amit ez a szünet kínál.</
 <tr><td><b>Sóbánya</b></td><td>Salzbergwerk Berchtesgaden — okt. 27.</td><td>☐ opcionális</td></tr>
 <tr><td><b>Umweltplakette</b></td><td>zöld plakett a szélvédőre — postai átfutás ~2 hét</td><td>☐ megrendelendő</td></tr>
 </table></div>
+<p class="mapnote" style="margin-bottom:0">A szállások részletei — cím, szoba, ár, be- és kicsekkolás, parkolás — a <b>Napi program</b> fülön, annál a napnál, amikor becsekkolunk.</p>
 </div>
 
-<h2><span class="num">2</span>A két szállás</h2>
-<div class="card">
-<div class="block"><h4>München — Premier Inn München City Ost (okt. 24–25.)</h4>
-<p style="margin:0">Kronstadter Straße 6-8, Bogenhausen. <b>Standard 4 ágyas szoba, 34 m²</b> —
-2 egyszemélyes + 1 franciaágy, mind a 4 fő egy szobában. 128 € (reggeli nélkül), reggelivel 164 €.
-S-Bahn (Berg am Laim) 1,5 km.<br>
-<b>Kelet-München:</b> az A8-ról érkezve nem kell átvágni a városon, és másnap Salzburg felé is
-innen indulsz. A baráti nap programjai (BMW Welt, Englischer Garten) viszont az északi oldalon vannak.
-<a class="pinbtn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/Premier+Inn+M%C3%BCnchen+City+Ost">📍 Térkép</a>
-<a class="wl" target="_blank" rel="noopener" href="https://www.booking.com/hotel/de/acom-munchen.hu.html">Booking</a></p></div>
-<div class="block"><h4>Salzburg — Motel One Salzburg-Süd (okt. 25–29.)</h4>
-<p style="margin:0">Alpenstraße 92-94, Salzburg-Süd. 8,6 pont (5 628 értékelés).
-<b>Standard szoba 17 m², max. 2 fő → két szoba.</b> 2 × 418 € = <b>837 €</b> négy éjre
-(reggeli nélkül); reggelivel 2 × 562 €, vagy a helyszínen 17,90 €/fő/nap.
-Magánparkoló a szállodánál, fizetős.<br>
-<b>Nem gyalogtáv az óváros:</b> a belváros 10–15 perc trolival, megálló az épület előtt.
-<a class="pinbtn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/Motel+One+Salzburg-S%C3%BCd">📍 Térkép</a>
-<a class="wl" target="_blank" rel="noopener" href="https://www.booking.com/hotel/at/motel-one-salzburg.hu.html">Booking</a></p></div>
-</div>
-
-<h2><span class="num">3</span>A terv logikája</h2>
+<h2><span class="num">2</span>A terv logikája</h2>
 <div class="card">
 <div class="block"><h4>Miért csak egy éj München?</h4>
 <p style="margin:0">Mert a baráti nap vasárnapra van kötve, és a barát Münchenben van.
@@ -263,6 +253,7 @@ végig autópálya és a vignetta fedi.</li>
 <h3>Budapest → München<span class="tbadge">ÁTUTAZÁS</span></h3>
 <div class="daydate">Október 24., szombat</div></div></div>
 <a class="wx" target="_blank" rel="noopener" href="https://www.google.com/search?q=id%C5%91j%C3%A1r%C3%A1s+M%C3%BCnchen">🌤 Időjárás — München</a>
+<div class="stay"><div class="stayimg" style="background-image:url(assets/img02.jpg)"></div><div class="staybody"><h4>🏡 Premier Inn München City Ost — 1 éj, okt. 24–25.</h4><table class="mini"><tr><th>Cím</th><td>Kronstadter Straße 6-8, Bogenhausen</td></tr><tr><th>Szoba</th><td>Standard 4 ágyas, 34 m² — 2 egyszemélyes + 1 franciaágy, mind a 4 fő egy szobában</td></tr><tr><th>Ár</th><td>128 € (reggeli nélkül) · reggelivel 164 €</td></tr><tr><th>Be- / kicsekkolás</th><td>15:00–0:00 / 12:00-ig</td></tr><tr><th>Booking</th><td><a href="https://www.booking.com/hotel/de/acom-munchen.hu.html" target="_blank" rel="noopener">Booking.com</a> · a linken még <em>acom</em>, a szállás át van brandelve</td></tr></table><p class="parkline">🅿️ Van parkolás a szállodánál — a díját a Booking nem írja ki. 🚇 S-Bahn (Berg am Laim) 1,5 km. <a class="pinbtn" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&travelmode=driving&destination=Premier+Inn+M%C3%BCnchen+City+Ost">📍 Útvonal</a></p></div></div>
 <ul class="acts">
 <li><div class="actrow"><div class="actinfo"><b>Reggel indulás</b> — minél korábban.
 A 680 km egy teljes nap, ne tervezz mellé programot.
@@ -300,6 +291,11 @@ vagy Olympiaturm (~40 €), ha a barát azt szeretné.
 <li><div class="actrow"><div class="actinfo"><b>~17:00 indulás Salzburgba</b> — 143 km, ~2 óra.
 <span class="park">~19:00 becsekkolás, vacsora Salzburgban</span></div>
 <a class="pinbtn" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/M%C3%BCnchen/Salzburg">📍 Útvonal</a></div></li>
+</ul>
+<div class="stay"><div class="stayimg" style="background-image:url(assets/img11.jpg)"></div><div class="staybody"><h4>🏡 Motel One Salzburg-Süd — 4 éj, okt. 25–29.</h4><table class="mini"><tr><th>Cím</th><td>Alpenstraße 92-94, Salzburg-Süd</td></tr><tr><th>Értékelés</th><td>8,6/10 (5 628 értékelés)</td></tr><tr><th>Szoba</th><td>Standard, 17 m², max. 2 fő — <b>két szoba kell</b>, a gyerekek külön szobában</td></tr><tr><th>Ár</th><td>2 × 418 € = <b>837 €</b> (4 éj, reggeli nélkül) · reggelivel 2 × 562 €</td></tr><tr><th>Be- / kicsekkolás</th><td>15:00-tól / 12:00-ig</td></tr><tr><th>Booking</th><td><a href="https://www.booking.com/hotel/at/motel-one-salzburg.hu.html" target="_blank" rel="noopener">Booking.com</a></td></tr></table><p class="parkline">🅿️ Magánparkoló a szállodánál, <b>fizetős</b> — az árat kérdezd meg. 🚎 Az óváros nem gyalogtáv: 10–15 perc trolival, megálló az épület előtt. <a class="pinbtn" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&travelmode=driving&destination=Motel+One+Salzburg-S%C3%BCd">📍 Útvonal</a></p></div></div>
+<ul class="notes">
+<li>🏨 <b>A négy salzburgi éj ugyanitt</b> — okt. 26., 27. és 28-án nincs pakolás, csak reggel elindultok.</li>
+<li>💶 Foglaláskor nézd meg, kérnek-e <b>idegenforgalmi adót</b> a helyszínen (Salzburgban Ortstaxe van).</li>
 </ul>
 </div></div>
 
@@ -395,7 +391,7 @@ Ha esik: Haus der Natur.</p>
 <ul class="acts">
 <li><div class="actrow"><div class="actinfo"><b>Reggel, ha van kedv:</b> Mirabell-kert vagy
 Hellbrunn kicsekkolás előtt. Nem kötelező — ez hazaindulós nap.</div></div></li>
-<li><div class="actrow"><div class="actinfo"><b>09:00 kicsekkolás</b> → 545 km
+<li><div class="actrow"><div class="actinfo"><b>09:00 kicsekkolás</b> (a limit 12:00) → 545 km
 <span class="park">~5 ó 35 vezetés + megállók</span></div>
 <a class="pinbtn" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/Salzburg/Budapest">📍 Térkép</a></div></li>
 </ul>
