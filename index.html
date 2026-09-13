@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ctext y=%27.9em%27 font-size=%2790%27%3E🏔️%3C/text%3E%3C/svg%3E">
+<title>München + Salzburg családi utazás — Alpok 2026 ősz</title>
+</head>
+<body>
+<style>:root{--bg:#fbfaf7;--surface:#fff;--ink:#232a30;--muted:#5f6b74;--line:#dfe4e8;--accent:#1c5f85;--soft:#e8f0f5;--warm:#bc7328;--warmsoft:#f8efe3;--ok:#2f8f5b;--sh:0 1px 3px rgba(30,50,65,.06),0 8px 24px rgba(30,50,65,.07);--r:14px}
+@media(prefers-color-scheme:dark){:root{--bg:#11171b;--surface:#1a2226;--ink:#e3eaef;--muted:#93a2ac;--line:#2b363d;--accent:#5aa9d0;--soft:#17303c;--warm:#e0a05c;--warmsoft:#2c2218;--ok:#5cc98a;--sh:0 1px 3px rgba(0,0,0,.3),0 8px 24px rgba(0,0,0,.4)}}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 "Segoe UI",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+.wrap{max-width:920px;margin:0 auto;padding:0 18px 80px}
+header.hero{background:linear-gradient(135deg,rgba(20,68,97,.84),rgba(13,45,66,.9)),url(assets/img13.jpg);background-size:cover;background-position:center;color:#fff;padding:54px 18px 44px;text-align:center}
+header.hero .k{text-transform:uppercase;letter-spacing:.22em;font-size:12px;opacity:.85;margin-bottom:12px}
+header.hero h1{margin:0 0 10px;font-size:clamp(26px,5vw,42px);line-height:1.1;font-weight:800}
+header.hero .d{font-size:16px;opacity:.92}
+header.hero .fam{margin-top:20px;display:inline-flex;flex-wrap:wrap;gap:8px;justify-content:center}
+header.hero .fam span{background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.28);padding:5px 13px;border-radius:999px;font-size:14px}
+nav.menu{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);margin-bottom:22px}
+nav.menu .items{max-width:920px;margin:0 auto;padding:10px 14px;display:flex;flex-wrap:wrap;gap:6px}
+nav.menu a{color:var(--muted);text-decoration:none;font-size:13.5px;font-weight:700;padding:7px 13px;border-radius:9px;cursor:pointer;border:1px solid transparent}
+nav.menu a:hover{background:var(--soft);color:var(--accent)}
+nav.menu a.active{background:var(--accent);color:#fff}
+.view{display:none}
+.view.active{display:block;animation:fade .18s ease}
+@keyframes fade{from{opacity:.35}to{opacity:1}}
+.daymenu{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 16px}
+.daypill{display:inline-flex;flex-direction:column;align-items:center;min-width:52px;padding:6px 9px;border-radius:10px;background:var(--surface);border:1px solid var(--line);color:var(--ink);text-decoration:none;cursor:pointer;line-height:1.2}
+.daypill b{font-size:15px}
+.daypill small{color:var(--muted);font-size:10.5px;white-space:nowrap}
+.daypill:hover{border-color:var(--accent)}
+.daypill.active{background:var(--accent);color:#fff;border-color:var(--accent)}
+.daypill.active small{color:rgba(255,255,255,.85)}
+.daypill.travel{border-left:3px solid var(--warm)}
+.dayview{display:none}
+.dayview.active{display:block}
+h2{font-size:23px;margin:34px 0 16px;padding-bottom:8px;border-bottom:2px solid var(--soft);display:flex;align-items:center;gap:10px}
+h2:first-of-type{margin-top:6px}
+h2 .num{background:var(--accent);color:#fff;min-width:30px;height:30px;padding:0 6px;border-radius:8px;display:grid;place-items:center;font-size:15px;font-weight:700}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--sh);padding:20px 22px;margin:14px 0}
+.tablewrap{overflow-x:auto}table{border-collapse:collapse;width:100%;font-size:14.5px}
+th,td{text-align:left;padding:9px 11px;border-bottom:1px solid var(--line);vertical-align:top}
+th{color:var(--muted);font-weight:700;font-size:12.5px}
+tr.total td{font-weight:800;background:var(--soft)}
+.ok{color:var(--ok);font-weight:700}
+blockquote{margin:14px 0;padding:13px 17px;background:var(--soft);border-left:4px solid var(--accent);border-radius:0 10px 10px 0}
+blockquote p{margin:0}
+blockquote.warn{background:var(--warmsoft);border-left-color:var(--warm)}
+.mapwrap{width:100%;margin:14px 0;border-radius:var(--r);overflow:hidden;border:1px solid var(--line);box-shadow:var(--sh)}
+.mapwrap iframe{width:100%;height:420px;border:0;display:block}
+.routebtns{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
+.routebtns a{background:var(--soft);color:var(--accent);text-decoration:none;padding:8px 12px;border-radius:8px;font-size:13px;font-weight:600;border:1px solid var(--line)}
+.routebtns a:hover{background:var(--accent);color:#fff}
+.mapnote{color:var(--muted);font-size:13.5px;margin:10px 0 6px}
+.daycard{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--sh);padding:20px 22px;margin:16px 0}
+.daycard.travelday{border:1px solid var(--warm);border-left:6px solid var(--warm);background:linear-gradient(180deg,color-mix(in srgb,var(--warm) 9%,var(--surface)),var(--surface) 120px)}
+.daycard.travelday .daynum{background:var(--warm)}
+.tbadge{display:inline-block;vertical-align:middle;margin-left:10px;background:var(--warm);color:#fff;font-size:11.5px;font-weight:700;letter-spacing:.03em;padding:3px 10px;border-radius:999px;white-space:nowrap}
+.dayhead{display:flex;align-items:center;gap:14px;margin-bottom:8px}
+.daynum{background:var(--accent);color:#fff;width:40px;height:40px;flex:none;border-radius:11px;display:grid;place-items:center;font-size:19px;font-weight:800}
+.dayhead h3{margin:0;font-size:19px}.daydate{color:var(--muted);font-size:13.5px}
+.wx{display:inline-block;background:var(--soft);color:var(--ink);font-size:13px;padding:5px 12px;border-radius:999px;margin:2px 0 10px;font-weight:600;text-decoration:none}
+.wx:hover{background:var(--accent);color:#fff}
+.drive{background:var(--soft);border-radius:10px;padding:11px 14px;margin:8px 0;font-size:14.5px;display:flex;align-items:center;gap:12px}
+.driveinfo{flex:1;min-width:0}
+.drive .dist{color:var(--accent);font-weight:700}
+.drive .route{font-family:Consolas,monospace;font-size:12.5px;color:var(--muted);margin-top:6px;white-space:pre-wrap}
+@media(max-width:560px){.drive{flex-direction:column;align-items:stretch}.drive .pinbtn{width:100%}}
+.block{margin:12px 0}.block h4{margin:0 0 7px;font-size:15px;color:var(--accent)}
+h4{font-size:15px}
+ul.acts{margin:0;padding-left:0;list-style:none}
+ul.acts li{padding:10px 0;border-bottom:1px solid var(--line)}
+ul.acts li:last-child{border-bottom:none}
+.actrow{display:flex;align-items:center;gap:12px}
+.actinfo{flex:1;min-width:0}
+.actbtns{display:flex;flex-direction:column;gap:6px;flex:none}
+.thumb{flex:none;width:68px;height:68px;border-radius:10px;overflow:hidden;border:1px solid var(--line);display:grid;place-items:center;text-decoration:none;background:var(--soft);color:var(--accent);font-size:20px;align-self:flex-start}
+.thumb img{width:100%;height:100%;object-fit:cover;display:block}
+.park{display:block;color:var(--muted);font-size:12.5px;margin-top:2px}
+@media(max-width:560px){.actrow{flex-direction:column;align-items:stretch}.actbtns{flex-direction:row}.actbtns .pinbtn{flex:1}}
+ul.notes{margin:8px 0;padding-left:20px}ul.notes li{margin:4px 0;font-size:14.5px}
+.pinbtn{display:inline-flex;align-items:center;justify-content:center;gap:4px;min-height:32px;padding:5px 11px;background:var(--soft);color:var(--accent);border:1px solid var(--line);border-radius:8px;font-weight:700;font-size:12.5px;text-decoration:none;white-space:nowrap}
+.pinbtn:active,.pinbtn:hover{background:var(--accent);color:#fff}
+.pinbtn.alt{color:var(--warm)}.pinbtn.alt:active,.pinbtn.alt:hover{background:var(--warm);color:#fff}
+.wl{color:var(--accent);text-decoration:none;font-weight:600}.wl:hover{text-decoration:underline}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin:12px 0}
+.gallery figure{margin:0}
+.gallery .ph{height:130px;border-radius:10px;background-size:cover;background-position:center;border:1px solid var(--line)}
+.gallery figcaption{font-size:11.5px;color:var(--muted);margin-top:5px;line-height:1.4}
+.packcols{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+.packcols h4{margin:0 0 6px;color:var(--accent)}.packcols ul{margin:0;padding-left:18px}.packcols li{margin:3px 0;font-size:14px}
+ul.check{list-style:none;padding:0;margin:0}
+ul.check li{padding:9px 0 9px 34px;position:relative;border-bottom:1px solid var(--line);font-size:14.5px;cursor:pointer;user-select:none}
+ul.check li:last-child{border-bottom:none}
+ul.check li::before{content:"\2610";position:absolute;left:2px;top:7px;font-size:18px;color:var(--muted)}
+ul.check li.done::before{content:"\2713";color:var(--ok);font-weight:800}
+ul.check li.done{color:var(--muted);text-decoration:line-through;text-decoration-color:var(--line)}
+.checkhint{font-size:12.5px;color:var(--muted);font-style:italic;margin:6px 0 0}
+.grand{background:linear-gradient(135deg,var(--accent),#12455f);color:#fff;border-radius:var(--r);padding:24px;text-align:center;margin-top:16px}
+.grand .big{font-size:clamp(26px,6vw,38px);font-weight:800;margin:4px 0}
+.grand .sub{opacity:.85;font-size:14px}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin:14px 0}
+.fact{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px;text-align:center;box-shadow:var(--sh)}
+.fact b{display:block;font-size:20px;color:var(--accent);line-height:1.2}
+.fact small{color:var(--muted);font-size:12px}
+.cut{border-left:4px solid var(--line);padding-left:14px;margin:12px 0;color:var(--muted);font-size:14.5px}
+.cut b{color:var(--ink)}
+a{color:var(--accent)}
+footer{border-top:1px solid var(--line);margin-top:44px;padding-top:20px;color:var(--muted);font-size:12.5px;line-height:1.6}
+footer h4{color:var(--muted);margin:0 0 8px;font-size:13px;text-transform:uppercase;letter-spacing:.08em}
+footer ul{margin:0;padding-left:18px}footer li{margin:2px 0}
+footer .made{text-align:center;margin-top:18px;font-style:italic}
+@media(max-width:560px){.mapwrap iframe{height:320px}}
+@media print{nav.menu{display:none}.view{display:block!important}.dayview{display:block!important}.daycard,.card{box-shadow:none;break-inside:avoid}header.hero{background:#12455f}}</style>
+<header class="hero"><div class="k">Családi road trip · 6 nap · 5 éjszaka</div>
+<h1>München + Salzburg<br>Alpok 2026 ősz</h1>
+<div class="d">📅 2026. október 24–29. · 🚗 ~1 670 km · 🏁 Budapest → München → Salzburg → Budapest</div>
+<div class="fam"><span>2 felnőtt + 2 gyerek</span><span>Őszi szünet</span><span>Csúcsidőn kívül</span></div></header>
+
+<nav class="menu"><div class="items">
+<a data-view="att" class="active">Áttekintés</a><a data-view="utvonal">Útvonal</a><a data-view="program">Napi program</a><a data-view="latnivalok">Látnivalók</a><a data-view="koltseg">Költség</a><a data-view="tippek">Tippek</a><a data-view="csomag">Csomagolás</a><a data-view="teendok">Teendők</a>
+</div></nav>
+
+<div class="wrap">
+
+<!-- ÁTTEKINTÉS -->
+<section class="view active" id="att">
+<h2><span class="num">1</span>Áttekintés</h2>
+
+<div class="facts">
+<div class="fact"><b>4</b><small>éjszaka Salzburgban</small></div>
+<div class="fact"><b>~1 670 km</b><small>összesen</small></div>
+<div class="fact"><b>1+1</b><small>bázis: München, Salzburg</small></div>
+<div class="fact"><b>~840e–1,08M Ft</b><small>becsült összköltség</small></div>
+</div>
+
+<blockquote><p><b>Miért október 24–29.?</b> Az őszi szünet okt. 23. – nov. 1., de a szünet
+két vége csapda. Okt. 23. magyar ünnep → nyugatra csúcsforgalom. Okt. 31. – nov. 1. pedig
+Allerheiligen <b>és</b> a bajor őszi szünet kezdete (nov. 2–6.) → tömeg, zárt üzletek.
+A köztes okt. 24–29. ablak a legüresebb szezon, amit ez a szünet kínál.</p></blockquote>
+
+<div class="card">
+<div class="tablewrap"><table>
+<tr><th>Mit</th><th>Részletek</th><th>Státusz</th></tr>
+<tr><td><b>Szállás 1.</b></td><td>München, 1 éjszaka — okt. 24–25.</td><td>☐ foglalandó</td></tr>
+<tr><td><b>Szállás 2.</b></td><td>Salzburg, 4 éjszaka — okt. 25–29. (Villa Maxglan a javaslat)</td><td>☐ foglalandó</td></tr>
+<tr><td><b>Baráti nap</b></td><td>okt. 25. (vasárnap), München</td><td>☐ egyeztetendő</td></tr>
+<tr><td><b>Sóbánya</b></td><td>Salzbergwerk Berchtesgaden — okt. 27.</td><td>☐ opcionális</td></tr>
+<tr><td><b>Umweltplakette</b></td><td>zöld plakett a szélvédőre — postai átfutás ~2 hét</td><td>☐ megrendelendő</td></tr>
+</table></div>
+</div>
+
+<h2><span class="num">2</span>A terv logikája</h2>
+<div class="card">
+<div class="block"><h4>Miért csak egy éj München?</h4>
+<p style="margin:0">Mert a baráti nap vasárnapra van kötve, és a barát Münchenben van.
+Így a müncheni éj az érkezés estéje, a vasárnap a baráté, és vasárnap este átköltözünk
+Salzburgba — 143 km, másfél óra. A hazaút pedig Salzburgból 545 km, nem Münchenből 653.</p></div>
+<div class="block"><h4>Salzburg mint bázis</h4>
+<p style="margin:0">Négy éj egy helyen, egy kipakolás. A sóbánya innen <b>27 km</b>, a Königssee 31,
+Werfen 44, Hallstatt 73. Amiért Münchenbe mentünk volna, az nagyrészt pótolható — Neuschwanstein
+viszont nem, az 222 km egy irányba. Ez a váltás ára, és tudatos.</p></div>
+<div class="block"><h4>A nap hossza a fő korlát</h4>
+<p style="margin:0"><b>Okt. 24/25. éjjel óraátállítás</b> — utána Salzburgban ~17:00-kor sötétedik.
+Minden szabadtéri program délelőtt és kora délután. Ez nem stílus, ez a nap hossza.</p></div>
+</div>
+</section>
+
+<!-- ÚTVONAL -->
+<section class="view" id="utvonal">
+<h2><span class="num">1</span>Útvonal</h2>
+<blockquote><p><b>Menetidők:</b> a fő szám a <b>reális</b> menetidő (4 fős család, 2–3 megállóval);
+zárójelben az <b>ideális</b>, megállás nélküli érték.</p></blockquote>
+
+<h2><span class="num">2</span>Odafelé — Budapest → München</h2>
+<div class="daycard travelday">
+<div class="dayhead"><div class="daynum">1</div><div>
+<h3>Október 24., szombat<span class="tbadge">ÁTUTAZÁS</span></h3>
+<div class="daydate">Reggel indulás · kora este érkezés</div></div></div>
+<div class="drive"><div class="driveinfo">
+<span class="dist">~680 km · ~8 ó 15</span> (ideális ~7 ó)
+<div class="route">Budapest → M1 → Hegyeshalom → A4 → Wien elkerülő (A21)
+  → A1 West Autobahn → Salzburg → A8 → München       680 km · 7 ó 00</div>
+</div><a class="pinbtn" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/Budapest/M%C3%BCnchen">📍 Útvonal</a></div>
+<ul class="notes">
+<li>Végig autópálya, nincs hegyi szakasz, nincs külön fizetős alagút.</li>
+<li><b>Osztrák kamionstop szombat 15:00-tól</b> — a délutáni szakasz üres.</li>
+<li>Kell: magyar e-matrica (M1) + osztrák 10 napos vignetta.</li>
+</ul>
+</div>
+
+<h2><span class="num">3</span>Transzfer — München → Salzburg</h2>
+<div class="daycard travelday">
+<div class="dayhead"><div class="daynum">2</div><div>
+<h3>Október 25., vasárnap<span class="tbadge">RÖVID ETAP</span></h3>
+<div class="daydate">A baráti nap után, késő délután</div></div></div>
+<div class="drive"><div class="driveinfo">
+<span class="dist">143 km · ~2 ó</span> (ideális 1 ó 36)
+<div class="route">München → A8 Salzburg irány → Salzburg            143 km · 1 ó 36</div>
+</div><a class="pinbtn" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/M%C3%BCnchen/Salzburg">📍 Útvonal</a></div>
+<ul class="notes">
+<li>Ugyanaz az A8, amin előző nap jöttünk. ~17:00 indulás → ~19:00 becsekkolás.</li>
+</ul>
+</div>
+
+<h2><span class="num">4</span>Visszafelé — Salzburg → Budapest</h2>
+<div class="daycard travelday">
+<div class="dayhead"><div class="daynum">6</div><div>
+<h3>Október 29., csütörtök<span class="tbadge">HAZAÚT</span></h3>
+<div class="daydate">09:00 kicsekkolás · ~15:30–16:00 Budapest</div></div></div>
+<div class="drive"><div class="driveinfo">
+<span class="dist">~545 km · ~6 ó 30</span> (ideális 5 ó 35)
+<div class="route">Salzburg → A1 → A21 (Bécs elkerülő) → S1 → A4 Ost Autobahn
+  → Hegyeshalom → M1 → Budapest                      545 km · 5 ó 35</div>
+</div><a class="pinbtn" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/Salzburg/Budapest">📍 Útvonal</a></div>
+<ul class="notes">
+<li>Végig autópálya, ugyanaz a korridor, amin kifelé mentünk — csak Münchent hagyjuk ki a végéről.</li>
+<li>Nem kell másnap iskolába: a szünet nov. 1-ig tart, tehát <b>három nap</b> marad itthon
+kifújni magát (okt. 30., 31., nov. 1.).</li>
+<li><b>Nincs értelmes alternatív útvonal.</b> A Graz-korridor Budapest felé kerülő, a Wien-korridor
+végig autópálya és a vignetta fedi.</li>
+</ul>
+</div>
+</section>
+
+<!-- NAPI PROGRAM -->
+<section class="view" id="program">
+<h2><span class="num">1</span>Napi program</h2>
+<div class="daymenu">
+<a class="daypill travel active" data-day="d1"><b>24</b><small>szo · út</small></a>
+<a class="daypill travel" data-day="d2"><b>25</b><small>vas · barát</small></a>
+<a class="daypill" data-day="d3"><b>26</b><small>hét · óváros</small></a>
+<a class="daypill" data-day="d4"><b>27</b><small>ked · sóbánya</small></a>
+<a class="daypill" data-day="d5"><b>28</b><small>sze · szabad</small></a>
+<a class="daypill travel" data-day="d6"><b>29</b><small>csü · haza</small></a>
+</div>
+
+<div class="dayview active" id="d1">
+<div class="daycard travelday">
+<div class="dayhead"><div class="daynum">1</div><div>
+<h3>Budapest → München<span class="tbadge">ÁTUTAZÁS</span></h3>
+<div class="daydate">Október 24., szombat</div></div></div>
+<a class="wx" target="_blank" rel="noopener" href="https://www.google.com/search?q=id%C5%91j%C3%A1r%C3%A1s+M%C3%BCnchen">🌤 Időjárás — München</a>
+<ul class="acts">
+<li><div class="actrow"><div class="actinfo"><b>Reggel indulás</b> — minél korábban.
+A 680 km egy teljes nap, ne tervezz mellé programot.
+<span class="park">Osztrák kamionstop szombat 15:00-tól — a délután üres</span></div></div></li>
+<li><div class="actrow"><div class="actinfo"><b>Ebéd útközben</b> — osztrák Raststation vagy Linz környéke.
+<span class="park">Itthonról bepakolt szendvics 30-40 €-t megfog</span></div></div></li>
+<li><div class="actrow"><a class="thumb" target="_blank" rel="noopener" href="https://www.google.com/maps/search/M%C3%BCnchen"><img src="assets/img02.jpg" alt="Marienplatz és a Neues Rathaus"></a>
+<div class="actinfo"><b>Kora este érkezés</b>, becsekkolás, vacsora a szállás közelében.
+<span class="park">Szállás: keleti/délkeleti München, saját parkolóval</span></div></div></li>
+</ul>
+<div class="drive"><div class="driveinfo"><span class="dist">Budapest → München: 680 km · ~8 ó 15</span>
+<div class="route">M1 → Hegyeshalom → A4 → A21 → A1 → Salzburg → A8 → München</div></div>
+<a class="pinbtn" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/Budapest/M%C3%BCnchen">📍 Útvonal</a></div>
+</div></div>
+
+<div class="dayview" id="d2">
+<div class="daycard travelday">
+<div class="dayhead"><div class="daynum">2</div><div>
+<h3>Baráti nap Münchenben → Salzburg<span class="tbadge">TRANSZFER</span></h3>
+<div class="daydate">Október 25., vasárnap · éjjel óraátállítás (+1 óra)</div></div></div>
+<a class="wx" target="_blank" rel="noopener" href="https://www.google.com/search?q=id%C5%91j%C3%A1r%C3%A1s+M%C3%BCnchen">🌤 Időjárás — München</a>
+<ul class="acts">
+<li><div class="actrow"><a class="thumb" target="_blank" rel="noopener" href="https://www.google.com/maps/search/BMW+Welt"><img src="assets/img07.jpg" alt="BMW Welt"></a>
+<div class="actinfo"><b>BMW Welt</b> — ingyenes, látványos, 11 és 13 évesnél biztos találat.
+Ha közös program kell a baráttal, ez a legolcsóbb jó ötlet.
+<span class="park">U-Bahn: Olympiazentrum · saját mélygarázs, fizetős</span></div>
+<a class="pinbtn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/BMW+Welt">📍 Térkép</a></div></li>
+<li><div class="actrow"><a class="thumb" target="_blank" rel="noopener" href="https://www.google.com/maps/search/Eisbach+Surfer"><img src="assets/img12.jpg" alt="Eisbach szörfösök"></a>
+<div class="actinfo"><b>Englischer Garten + Eisbach-szörfösök</b> — ingyenes, és
+októberben is mennek. Séta, aztán sörkert.</div>
+<a class="pinbtn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/Englischer+Garten+M%C3%BCnchen">📍 Térkép</a></div></li>
+<li><div class="actrow"><div class="actinfo"><b>Fizetős alternatívák:</b> Tierpark Hellabrunn (~50 €)
+vagy Olympiaturm (~40 €), ha a barát azt szeretné.
+<span class="park">⚠️ Vasárnap Németországban az üzletek zárva — bevásárolni szombat este</span></div></div></li>
+<li><div class="actrow"><div class="actinfo"><b>~17:00 indulás Salzburgba</b> — 143 km, ~2 óra.
+<span class="park">~19:00 becsekkolás, vacsora Salzburgban</span></div>
+<a class="pinbtn" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/M%C3%BCnchen/Salzburg">📍 Útvonal</a></div></li>
+</ul>
+</div></div>
+
+<div class="dayview" id="d3">
+<div class="daycard">
+<div class="dayhead"><div class="daynum">3</div><div>
+<h3>Salzburg óváros + Festung</h3>
+<div class="daydate">Október 26., hétfő · végig gyalogos nap</div></div></div>
+<a class="wx" target="_blank" rel="noopener" href="https://www.google.com/search?q=id%C5%91j%C3%A1r%C3%A1s+Salzburg">🌤 Időjárás — Salzburg</a>
+<ul class="acts">
+<li><div class="actrow"><a class="thumb" target="_blank" rel="noopener" href="https://www.google.com/maps/search/Festung+Hohensalzburg"><img src="assets/img13.jpg" alt="Festung Hohensalzburg"></a>
+<div class="actinfo"><b>Festung Hohensalzburg</b> — a vár <b>9:30–17:00</b>, a FestungsBahn sikló
+októberben <b>9:00–20:30</b>. Jegy: 14,50 € (alap + sikló) vagy <b>18 €</b> (all-inclusive:
+múzeumok + audio guide). 6 év alatt ingyen, 6–14 között kedvezményes.
+<span class="park">4 főre ~50–60 € · a várnál nincs parkoló, a sikló alsó állomásához menj</span></div>
+<a class="pinbtn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/Festung+Hohensalzburg">📍 Térkép</a></div></li>
+<li><div class="actrow"><a class="thumb" target="_blank" rel="noopener" href="https://www.google.com/maps/search/Getreidegasse+Salzburg"><img src="assets/img11.jpg" alt="Salzburg óváros"></a>
+<div class="actinfo"><b>Getreidegasse, Dóm, Residenzplatz</b> — Mozart szülőháza kívülről is
+látvány. Ingyenes séta, a cégérek miatt a Getreidegasse önmagában látnivaló.</div>
+<a class="pinbtn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/Getreidegasse+Salzburg">📍 Térkép</a></div></li>
+<li><div class="actrow"><a class="thumb" target="_blank" rel="noopener" href="https://www.google.com/maps/search/Mirabellgarten"><img src="assets/img14.jpg" alt="Mirabell-kert"></a>
+<div class="actinfo"><b>Mirabell-kert</b> — ingyenes, és itt van a Sound of Music-lépcső.
+Októberben a kert még rendezett.</div>
+<a class="pinbtn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/Mirabellgarten+Salzburg">📍 Térkép</a></div></li>
+<li><div class="actrow"><div class="actinfo"><b>Ebéd: Augustiner Bräustübl</b> (Mülln) — hatalmas,
+önkiszolgáló sörház saját sörfőzdével. Magad viszed a korsót és a kaját, a gyerekeknek külön élmény.
+<span class="park">Alternatíva: Sternbräu a belvárosban, gyerekbarát menüvel</span></div>
+<a class="pinbtn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/Augustiner+Br%C3%A4ust%C3%BCbl+Salzburg">📍 Térkép</a></div></li>
+</ul>
+</div></div>
+
+<div class="dayview" id="d4">
+<div class="daycard">
+<div class="dayhead"><div class="daynum">4</div><div>
+<h3>Sóbánya + Königssee</h3>
+<div class="daydate">Október 27., kedd · Berchtesgaden, 27 km</div></div></div>
+<a class="wx" target="_blank" rel="noopener" href="https://www.google.com/search?q=id%C5%91j%C3%A1r%C3%A1s+Berchtesgaden">🌤 Időjárás — Berchtesgaden</a>
+<ul class="acts">
+<li><div class="actrow"><a class="thumb" target="_blank" rel="noopener" href="https://www.google.com/maps/search/Salzbergwerk+Berchtesgaden"><img src="assets/img10.jpg" alt="Salzbergwerk Berchtesgaden"></a>
+<div class="actinfo"><b>Salzbergwerk Berchtesgaden</b> — Salzburgtól <b>27 km / 35 perc</b>.
+Nyári rend nov. 8-ig: <b>9:00–17:00</b>. Csak vezetett túra, ~1 óra, <b>de védőruha fel/le →
+számolj 2 órával</b>. Beltéri, bányavasút és csúszda.
+<span class="park">Családi jegy 59 € + 8 € a 2. gyerekért = 67 € · saját parkoló</span></div>
+<a class="pinbtn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/Salzbergwerk+Berchtesgaden">📍 Térkép</a></div></li>
+<li><div class="actrow"><a class="thumb" target="_blank" rel="noopener" href="https://www.google.com/maps/search/K%C3%B6nigssee"><img src="assets/img15.jpg" alt="Königssee"></a>
+<div class="actinfo"><b>Königssee</b> — a sóbányától 10 perc, Salzburgtól 31 km.
+<b>⚠️ A hajómenetrendet indulás előtt ellenőrizd:</b> a Salet-járat október közepéig megy,
+a St. Bartholomä-járat télen is, de ritkábban.
+<span class="park">+49 8652 9636-0 · ha nem megy a hajó, a Malerwinkel-séta akkor is megvan</span></div>
+<a class="pinbtn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/K%C3%B6nigssee+Sch%C3%B6nau">📍 Térkép</a></div></li>
+</ul>
+<div class="cut"><b>Kehlsteinhaus (Eagle's Nest):</b> a szezon okt. 31-én zár, tehát elvileg nyitva.
+Szándékosan nincs betervezve — 1834 m, időjárásfüggő buszos felvonással. Ha ragyogó idő van és
+van egy plusz órád, <b>dönts helyben</b>; a sóbányát nem érdemes kockára tenni érte.</div>
+</div></div>
+
+<div class="dayview" id="d5">
+<div class="daycard">
+<div class="dayhead"><div class="daynum">5</div><div>
+<h3>Választható nap<span class="tbadge">IDŐJÁRÁSFÜGGŐ</span></h3>
+<div class="daydate">Október 28., szerda · reggel dönts</div></div></div>
+<a class="wx" target="_blank" rel="noopener" href="https://www.google.com/search?q=id%C5%91j%C3%A1r%C3%A1s+Werfen">🌤 Időjárás — Werfen</a>
+<ul class="acts">
+<li><div class="actrow"><a class="thumb" target="_blank" rel="noopener" href="https://www.google.com/maps/search/Eisriesenwelt"><img src="assets/img17.jpg" alt="Eisriesenwelt, Werfen"></a>
+<div class="actinfo"><b>A) Eisriesenwelt, Werfen</b> — 44 km / 41 perc. A világ legnagyobb jégbarlangja.
+<b>A szezon nov. 1-jén zár</b>, tehát még megy. Pénztár 8:30–15:00, barlangtúra 9:30–15:45.
+1641 m, felvonó + sok lépcső, a barlangban <b>fagypont körül</b> van.
+<span class="park">Sapka, kesztyű, jó cipő — ez nem opcionális</span></div>
+<a class="pinbtn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/Eisriesenwelt+Werfen">📍 Térkép</a></div></li>
+<li><div class="actrow"><a class="thumb" target="_blank" rel="noopener" href="https://www.google.com/maps/search/Hallstatt"><img src="assets/img16.jpg" alt="Hallstatt"></a>
+<div class="actinfo"><b>B) Hallstatt</b> — 73 km / 1 ó 16. Világörökség, tóparti falu.
+Október végén már csendes, ami itt kifejezetten előny.
+<span class="park">P1–P2 a falun kívül, fizetős. Autóval ne menj be a faluba.</span></div>
+<a class="pinbtn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/Hallstatt">📍 Térkép</a></div></li>
+<li><div class="actrow"><div class="actinfo"><b>C) Hellbrunn Wasserspiele</b> — 5 km.
+<b>A szezon nov. 1-jén zár.</b> 9:30–17:30, utolsó belépő 16:30. A vízijátékok ennek a
+korosztálynak is működnek.</div>
+<a class="pinbtn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/Schloss+Hellbrunn">📍 Térkép</a></div></li>
+<li><div class="actrow"><div class="actinfo"><b>Esős terv: Haus der Natur</b> (Museumsplatz 5) —
+naponta <b>9:00–17:00</b>, utolsó belépő 16:30. Science center, akvárium, dinók, 7000 m².
+<span class="park">Családi jegy (2 felnőtt + 2 gyerek): 48 €</span></div>
+<a class="pinbtn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/Haus+der+Natur+Salzburg">📍 Térkép</a></div></li>
+</ul>
+<p style="margin:10px 0 0"><b>Ha derült és fagymentes: Eisriesenwelt.</b> Ha borús: Hallstatt.
+Ha esik: Haus der Natur.</p>
+</div></div>
+
+<div class="dayview" id="d6">
+<div class="daycard travelday">
+<div class="dayhead"><div class="daynum">6</div><div>
+<h3>Salzburg → Budapest<span class="tbadge">HAZAÚT</span></h3>
+<div class="daydate">Október 29., csütörtök</div></div></div>
+<ul class="acts">
+<li><div class="actrow"><div class="actinfo"><b>Reggel, ha van kedv:</b> Mirabell-kert vagy
+Hellbrunn kicsekkolás előtt. Nem kötelező — ez hazaindulós nap.</div></div></li>
+<li><div class="actrow"><div class="actinfo"><b>09:00 kicsekkolás</b> → 545 km
+<span class="park">~5 ó 35 vezetés + megállók</span></div>
+<a class="pinbtn" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/Salzburg/Budapest">📍 Térkép</a></div></li>
+</ul>
+<div class="drive"><div class="driveinfo"><span class="dist">Salzburg → Budapest: 545 km · ~5 ó 35</span>
+<div class="route">A1 → A21 (Bécs elkerülő) → S1 → A4 → Hegyeshalom → M1 → Budapest</div></div>
+<a class="pinbtn" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/Salzburg/Budapest">📍 Útvonal</a></div>
+<p style="margin:10px 0 0"><b>~15:30–16:00 Budapest.</b> A szünetből még három nap marad
+itthon (okt. 30., 31., nov. 1.).</p>
+</div></div>
+</section>
+
+<!-- LÁTNIVALÓK -->
+<section class="view" id="latnivalok">
+<h2><span class="num">1</span>Látnivalók összefoglalója</h2>
+<div class="card"><div class="tablewrap"><table>
+<tr><th>Látnivaló</th><th>Nap</th><th>Nyitva</th><th>Belépő (4 fő)</th><th>Megjegyzés</th></tr>
+<tr><td><b>BMW Welt</b></td><td>2.</td><td>naponta</td><td><b>ingyenes</b></td><td>Baráti nap opció</td></tr>
+<tr><td><b>Festung Hohensalzburg</b></td><td>3.</td><td>9:30–17:00</td><td>~50–60 €</td><td>Sikló okt. 9:00–20:30</td></tr>
+<tr><td><b>Salzburg óváros, Mirabell</b></td><td>3.</td><td>—</td><td>ingyenes</td><td>Getreidegasse, Dóm</td></tr>
+<tr><td><b>Salzbergwerk Berchtesgaden</b></td><td>4.</td><td>9:00–17:00</td><td><b>67 €</b></td><td>Nyári rend nov. 8-ig</td></tr>
+<tr><td><b>Königssee</b></td><td>4.</td><td>hajó: ellenőrizni</td><td>~60–70 € (becslés)</td><td>Késő őszi menetrend ritkább</td></tr>
+<tr><td><b>Eisriesenwelt</b></td><td>5.</td><td>9:30–15:45, <b>nov. 1-ig</b></td><td>ár ellenőrzendő</td><td>Fagypont a barlangban</td></tr>
+<tr><td><b>Hallstatt</b></td><td>5.</td><td>—</td><td>ingyenes (parkolás nem)</td><td>73 km, tóparti falu</td></tr>
+<tr><td><b>Hellbrunn Wasserspiele</b></td><td>5.</td><td>9:30–17:30, <b>nov. 1-ig</b></td><td>ár ellenőrzendő</td><td>Utolsó belépő 16:30</td></tr>
+<tr><td><b>Haus der Natur</b></td><td>5.</td><td>9:00–17:00</td><td><b>48 €</b> családi</td><td>Esős terv, science center</td></tr>
+</table></div></div>
+
+<h2><span class="num">2</span>Amit tudatosan kihagytunk</h2>
+<div class="card">
+<div class="block"><h4>Neuschwanstein</h4><p style="margin:0">Salzburgi bázisról 222 km / 3 óra
+<b>egy irányba</b>. Idősávos jeggyel, októberi napfénnyel ez egy teljes nap vezetéssel.
+Ez a Salzburg-váltás ára, és tudatos.</p></div>
+<div class="block"><h4>Deutsches Museum, BMW Museum</h4><p style="margin:0">Müncheni programok,
+és Münchenre egy éj jut — az is a baráté. A BMW <b>Welt</b> viszont ingyenes, az belefér.</p></div>
+<div class="block"><h4>Partnachklamm</h4><p style="margin:0">90 km Münchentől, 180 Salzburgtól.
+Salzburgi bázisról értelmetlen.</p></div>
+<div class="block"><h4>Salzwelten Hallein</h4><p style="margin:0">Közelebb van (19 km), mint
+Berchtesgaden, de 4 főre ~102 € a berchtesgadeni 67 € helyett. Ugyanaz az élmény, drágábban.</p></div>
+<div class="block"><h4>Zugspitze, Legoland</h4><p style="margin:0">230 € egy kilátásért, ami okt.
+végén többször felhőben van, mint nem — illetve 300 km és egy teljes nap egy felemás élményért.</p></div>
+</div>
+
+<h2><span class="num">3</span>Képek</h2>
+<div class="gallery">
+<figure><div class="ph" style="background-image:url(assets/img13.jpg)"></div><figcaption>Festung Hohensalzburg</figcaption></figure>
+<figure><div class="ph" style="background-image:url(assets/img11.jpg)"></div><figcaption>Salzburg óváros</figcaption></figure>
+<figure><div class="ph" style="background-image:url(assets/img14.jpg)"></div><figcaption>Mirabell-kert</figcaption></figure>
+<figure><div class="ph" style="background-image:url(assets/img10.jpg)"></div><figcaption>Salzbergwerk Berchtesgaden</figcaption></figure>
+<figure><div class="ph" style="background-image:url(assets/img15.jpg)"></div><figcaption>Königssee</figcaption></figure>
+<figure><div class="ph" style="background-image:url(assets/img17.jpg)"></div><figcaption>Eisriesenwelt, Werfen</figcaption></figure>
+<figure><div class="ph" style="background-image:url(assets/img16.jpg)"></div><figcaption>Hallstatt</figcaption></figure>
+<figure><div class="ph" style="background-image:url(assets/img07.jpg)"></div><figcaption>BMW Welt</figcaption></figure>
+<figure><div class="ph" style="background-image:url(assets/img12.jpg)"></div><figcaption>Eisbach szörfösök</figcaption></figure>
+<figure><div class="ph" style="background-image:url(assets/img02.jpg)"></div><figcaption>Marienplatz</figcaption></figure>
+<figure><div class="ph" style="background-image:url(assets/img01.jpg)"></div><figcaption>München</figcaption></figure>
+</div>
+</section>
+
+<!-- KÖLTSÉG -->
+<section class="view" id="koltseg">
+<h2><span class="num">1</span>Költségkalkuláció</h2>
+<p class="mapnote">4 fő, 5 éjszaka (1 München + 4 Salzburg), saját autó. <b>Nagyságrend, nem ajánlat.</b></p>
+
+<div class="card"><h4>Szállás</h4><div class="tablewrap"><table>
+<tr><th>Tétel</th><th>Alsó</th><th>Felső</th></tr>
+<tr><td>München, 1 éj</td><td>121 €</td><td>156 €</td></tr>
+<tr><td>Salzburg, 4 éj</td><td>994 €</td><td>1 151 €</td></tr>
+<tr class="total"><td>Összesen</td><td>1 115 €</td><td>1 307 €</td></tr>
+</table></div>
+<p class="mapnote" style="margin-bottom:0"><b>Ez a tétel drágítja a tervet.</b> Salzburg ezen a
+szinten ~290 €/éj. Ha vissza kell húzni a keretet, itt kell: a Das Grüne Hotel zur Post kétszobás
+lakosztálya 994 € négy éjre, 4 külön ággyal.</p></div>
+
+<div class="card"><h4>Közlekedés</h4>
+<p class="mapnote">Alapfeltevés: ~1 670 km összesen (680 oda + 143 transzfer + 545 haza + ~300 helyi).
+PHEV, autópályán benzinnel, <b>7–8 l/100 km</b> — a 7 az alsó becslés, nem az átlag.</p>
+<div class="tablewrap"><table>
+<tr><th>Tétel</th><th>Becslés</th></tr>
+<tr><td>Üzemanyag (~117–134 l, DE/AT/HU vegyes ár)</td><td>205–240 €</td></tr>
+<tr><td>Osztrák 10 napos vignetta</td><td>~13 €</td></tr>
+<tr><td>Magyar e-matrica D1, havi (M1, oda és vissza)</td><td>~14 €</td></tr>
+<tr><td>Német Umweltplakette (egyszeri, zöld)</td><td>6–15 €</td></tr>
+<tr><td>Parkolás (Salzburgban a szállásnál ingyenes)</td><td>30–50 €</td></tr>
+<tr class="total"><td>Összesen</td><td>~270–330 €</td></tr>
+</table></div>
+<p class="mapnote" style="margin-bottom:0">A hazaút végig a Wien-korridoron megy, tehát <b>nincs
+külön fizetős alagút</b>, és a magyar szakaszra ugyanaz a havi e-matrica jó, mint odafelé.
+Ha a salzburgi szálláson tudsz tölteni, a helyi napok benzinköltsége lejjebb megy.</p></div>
+
+<div class="card"><h4>Étkezés</h4><div class="tablewrap"><table>
+<tr><th>Tétel</th><th>Alsó</th><th>Felső</th></tr>
+<tr><td>6 nap, 4 fő (reggeli a szálláson, ebéd/vacsora kint)</td><td>540 €</td><td>780 €</td></tr>
+</table></div></div>
+
+<div class="card"><h4>Programok és belépők</h4><div class="tablewrap"><table>
+<tr><th>Tétel</th><th>Összeg</th></tr>
+<tr><td>Festung Hohensalzburg (sikló + múzeumok)</td><td>~50–60 €</td></tr>
+<tr><td>Salzbergwerk Berchtesgaden</td><td>67 €</td></tr>
+<tr><td>Königssee hajó (ha megy)</td><td>~60–70 €</td></tr>
+<tr><td>5. napi program (Eisriesenwelt / Hallstatt / Hellbrunn / Haus der Natur)</td><td>0–80 €</td></tr>
+<tr><td>BMW Welt</td><td>ingyenes</td></tr>
+<tr class="total"><td>Összesen</td><td>~180–280 €</td></tr>
+</table></div></div>
+
+<div class="card"><h4>Teljes becsült költség</h4><div class="tablewrap"><table>
+<tr><th></th><th>Alsó</th><th>Felső</th></tr>
+<tr><td>Szállás (München 1 éj + Salzburg 4 éj)</td><td>1 115 €</td><td>1 307 €</td></tr>
+<tr><td>Közlekedés</td><td>270 €</td><td>330 €</td></tr>
+<tr><td>Étkezés</td><td>540 €</td><td>780 €</td></tr>
+<tr><td>Programok</td><td>180 €</td><td>280 €</td></tr>
+<tr class="total"><td>Összesen</td><td>~2 105 €</td><td>~2 700 €</td></tr>
+</table></div></div>
+
+<div class="grand"><div class="sub">Becsült összköltség</div>
+<div class="big">~840 000 – 1 080 000 Ft</div>
+<div class="sub">4 fő · 5 éjszaka · 400 Ft/EUR</div></div>
+</section>
+
+<!-- TIPPEK -->
+<section class="view" id="tippek">
+<h2><span class="num">1</span>Umweltzone München</h2>
+<div class="card"><ul class="notes">
+<li>A Mittlerer Ringen <b>belül 2023. február 1-től csak zöld plakettel</b> lehet behajtani.</li>
+<li><b>A külföldi autókra is vonatkozik</b> — magyar rendszám nem kivétel.</li>
+<li><b>A hibrid nem mentesít</b> — belsőégésű motor van benne, tehát ki kell tenni.</li>
+<li>A benzines PHEV Euro 6, tehát <b>zöld plakett jár rá</b>. Postai rendelés ~2 hét, 6–15 €.</li>
+<li><b>Egy éjszakára is kell</b>, ha a baráti nap a belvárosba visz.</li>
+</ul></div>
+
+<h2><span class="num">2</span>Salzburg Card</h2>
+<div class="card"><p style="margin:0">A város kártyája (24/48/72 óra) tartalmazza a FestungsBahnt,
+a Haus der Naturt, a Hellbrunnt és a tömegközlekedést. <b>Három salzburgi napra nézd meg, kijön-e</b> —
+az aktuális ár a salzburg.info oldalon van. A kalkulációban nem számolok vele.</p></div>
+
+<h2><span class="num">3</span>Óraátállítás és a nap hossza</h2>
+<div class="card"><ul class="notes">
+<li><b>Okt. 24/25. éjjel</b> áll át az óra (október utolsó vasárnapja) → +1 óra alvás.</li>
+<li>Utána Salzburgban <b>~17:00 körül van napnyugta</b>.</li>
+<li><b>Minden szabadtéri program délelőtt és kora délután.</b> Ez nem stílus, ez a nap hossza.</li>
+</ul></div>
+
+<h2><span class="num">4</span>Téli gumi</h2>
+<div class="card"><ul class="notes">
+<li><b>Ausztria:</b> nov. 1. – ápr. 15. között kötelező téli körülmények közt. Okt. 29-én elhagyjuk
+Ausztriát, tehát <b>ránk még nem áll</b> — de négy napot töltünk ott, és az Eisriesenwelt 1641 m-en van.</li>
+<li><b>Németország: szituatív</b> — havas/jeges úton M+S kötelező, dátum nélkül.</li>
+<li><b>Nézd meg a gumikat indulás előtt.</b></li>
+</ul></div>
+
+<h2><span class="num">5</span>Vasárnapi zárvatartás</h2>
+<div class="card"><p style="margin:0">Németországban <b>és</b> Ausztriában vasárnap az üzletek zárva.
+A 2. nap (okt. 25.) baráti nap Münchenben — ha kell bevásárolni, szombat este tedd, vagy hétfőn Salzburgban.</p></div>
+
+<h2><span class="num">6</span>Csúcsidő, amit elkerülünk</h2>
+<div class="card"><ul class="notes">
+<li><b>Okt. 23. (péntek):</b> magyar ünnep, nyugatra csúcsforgalom.</li>
+<li><b>Okt. 31. (szombat):</b> indul a német utazási hullám.</li>
+<li><b>Nov. 1. (vasárnap):</b> Allerheiligen — munkaszüneti nap Bajorországban <b>és</b> Ausztriában.
+Ezen a napon zár az Eisriesenwelt és a Hellbrunn is.</li>
+<li><b>Nov. 2–6.:</b> bajor őszi szünet — mi már otthon vagyunk.</li>
+</ul></div>
+
+<h2><span class="num">7</span>Étterem-ajánlások</h2>
+<div class="card">
+<p class="mapnote">Csak olyan helyek, amik biztosan léteznek és intézmények.
+<b>Az árakat és a nyitvatartást indulás előtt ellenőrizd.</b> Nagyobb sörházba 4 főre este foglalj asztalt.</p>
+<div class="block"><h4>Salzburg</h4><p style="margin:0"><b>Augustiner Bräustübl</b> (Mülln) — önkiszolgáló
+sörház saját sörfőzdével, külön kategória. <b>Sternbräu</b> — belvárosi, tágas, gyerekbarát menü.
+<b>Zum Fidelen Affen</b> — kisebb, helyi, este asztalfoglalás kell.</p></div>
+<div class="block"><h4>München</h4><p style="margin:0"><b>Hofbräuhaus</b> — a turistaklasszikus, egyszer megéri.
+<b>Augustiner-Keller</b> — helyiek is járnak. <b>Viktualienmarkt</b> standjai — ebédre a legjobb ár-érték.</p></div>
+<div class="block"><h4>Autópálya</h4><p style="margin:0">Az osztrák Raststation-ök tiszták és korrektek,
+de drágák. 4 főre az itthonról bepakolt szendvics 30-40 €-t megfog az első napon.</p></div>
+</div>
+
+<h2><span class="num">8</span>Parkolás és navigáció</h2>
+<div class="card"><div class="tablewrap"><table>
+<tr><th>Helyszín</th><th>Parkolás</th></tr>
+<tr><td><b>Villa Maxglan (szállás)</b></td><td>Ingyenes helyszíni parkolás.</td></tr>
+<tr><td><b>Salzburg óváros</b></td><td>Altstadtgarage Mönchsberg (a hegy alatt), onnan gyalog a centrum.</td></tr>
+<tr><td><b>Festung Hohensalzburg</b></td><td>A várnál nincs parkoló — a sikló alsó állomásához menj, vagy gyalog fel.</td></tr>
+<tr><td><b>Salzbergwerk</b></td><td>Saját nagy parkoló a bejáratnál.</td></tr>
+<tr><td><b>Königssee</b></td><td>Schönau am Königssee, fizetős parkolók a tóparti sétány előtt.</td></tr>
+<tr><td><b>Eisriesenwelt</b></td><td>Werfen, alsó parkoló, onnan busz + felvonó.</td></tr>
+<tr><td><b>Hallstatt</b></td><td>P1–P2 a falun kívül, fizetős. Autóval ne menj be a faluba.</td></tr>
+<tr><td><b>München (1 éj)</b></td><td>A szállás saját parkolója — ezért szempont a foglalásnál.</td></tr>
+</table></div>
+<blockquote class="warn"><p>⚠️ Münchenben ellenőrizd az <b>Umweltzone határát</b> — a Mittlerer Ring a vonal.</p></blockquote></div>
+</section>
+
+<!-- CSOMAGOLÁS -->
+<section class="view" id="csomag">
+<h2><span class="num">1</span>Csomagolási lista</h2>
+<blockquote><p><b>Okt. végi Salzburg + Alpok: 5–12 °C, eső reális, hegyen akár havazás.</b>
+Az Eisriesenwelt barlangjában <b>fagypont körül</b> van — ez külön tétel.</p></blockquote>
+
+<div class="card"><h4>Ruha</h4><ul class="notes">
+<li>Réteges: pulóver + vízálló kabát mind a 4 főnek</li>
+<li><b>Sapka, sál, kesztyű</b> — a jégbarlanghoz és a Königssee-hez nem luxus</li>
+<li>Kényelmes, vízálló cipő — a Festung, a barlang és Hallstatt is köves-lépcsős</li>
+<li>Egy alkalmi szett vacsorához · esernyő (kicsi, kettő)</li>
+</ul></div>
+
+<div class="card"><h4>Autó</h4><ul class="notes">
+<li>Töltőkábel (PHEV), telefontartó, töltők, autós adapter</li>
+<li>Ablakmosó, jégkaparó (okt. végi Alpok)</li>
+<li>Elsősegély, láthatósági mellény (osztrák előírás), elakadásjelző</li>
+<li>Szendvics + ital az első napra</li>
+</ul></div>
+
+<div class="card"><h4>Dokumentum</h4><ul class="notes">
+<li>Személyi/útlevél mind a 4 főnek</li>
+<li><b>EU-kártya (EHIC)</b> mind a 4 főnek</li>
+<li>Forgalmi, jogosítvány, zöldkártya, utasbiztosítás kötvényszáma</li>
+<li>Foglalási visszaigazolások offline is (PDF a telefonon)</li>
+</ul></div>
+
+<div class="card"><h4>Gyerekeknek a hosszú etapokra</h4><ul class="notes">
+<li>Letöltött film/sorozat, fejhallgató</li>
+<li>Könyv, kártya, powerbank</li>
+</ul></div>
+</section>
+
+<!-- TEENDŐK -->
+<section class="view" id="teendok">
+<h2><span class="num">1</span>Most, ezen a héten</h2>
+<div class="card"><ul class="check" data-group="a">
+<li><b>Salzburgi szállás, 4 éj, okt. 25–29.</b> — Villa Maxglan a javaslat (1 151 €, 9,8 pont,
+145 m², 3 hálószoba, ingyenes parkoló). Ez a legnagyobb tétel és a legszűkebb kínálat, ez megy elsőnek.</li>
+<li><b>Müncheni szállás, 1 éj, okt. 24–25.</b> — 120–160 €, parkolóval. Előbb kérdezd meg a
+barátot, hol lakik — az dönti el, melyik városrész.</li>
+<li><b>Szólj a barátodnak</b> — pinneld le okt. 25-öt (vasárnap), amíg szabad</li>
+<li><b>Zöld Umweltplakette megrendelése</b> — postai átfutás ~2 hét</li>
+</ul>
+<p class="checkhint">Kattints egy sorra a kipipálásához — a böngésző megjegyzi.</p></div>
+
+<h2><span class="num">2</span>Október elején</h2>
+<div class="card"><ul class="check" data-group="b">
+<li><b>Osztrák digitális vignetta</b>, 10 napos (~13 €). ⚠️ Online vásárlásnál az érvényesség
+késhet (elállási jog), ha nem mondasz le róla kifejezetten. Vagy vedd meg jó előre, vagy egy
+benzinkúton a határ előtt.</li>
+<li><b>Magyar e-matrica</b> D1, havi (~5 500 Ft) — az M1-hez <b>mindkét irányban</b> kell</li>
+<li><b>Königssee hajómenetrend</b> — késő őszi rend: +49 8652 9636-0</li>
+<li><b>Téli gumi ellenőrzése</b></li>
+<li><b>Salzburg Card</b> — számold ki, kijön-e a három napra</li>
+</ul></div>
+
+<h2><span class="num">3</span>Indulás előtti héten</h2>
+<div class="card"><ul class="check" data-group="c">
+<li><b>Okt. 26–28.: időjárás-előrejelzés</b> → dönts az 5. napról (Eisriesenwelt / Hallstatt / beltér)</li>
+<li><b>Eisriesenwelt</b> — nyitva van-e, és milyen az idő Werfenben</li>
+<li><b>Salzbergwerk</b> — csúcsidőn kívül a helyszíni jegy általában megy, de ha fix 10:00-t akarsz, foglalj</li>
+<li><b>Dokumentumok:</b> gyerekek okmányai, EU-kártya mind a 4 főnek, utasbiztosítás, forgalmi + zöldkártya</li>
+<li><b>PHEV:</b> töltőkábel bepakolása, szállás konnektor-lehetőségének egyeztetése</li>
+</ul></div>
+
+<h2><span class="num">4</span>Hasznos linkek</h2>
+<div class="card"><ul class="notes">
+<li><a class="wl" target="_blank" rel="noopener" href="https://www.festung-hohensalzburg.at/">Festung Hohensalzburg</a> ·
+<a class="wl" target="_blank" rel="noopener" href="https://www.salzburg.info/">Salzburg Card és városinfó</a></li>
+<li><a class="wl" target="_blank" rel="noopener" href="https://www.salzbergwerk.de/en/plan-a-visit">Salzbergwerk Berchtesgaden</a> ·
+<a class="wl" target="_blank" rel="noopener" href="https://www.seenschifffahrt.de/en/koenigssee">Königssee hajó</a></li>
+<li><a class="wl" target="_blank" rel="noopener" href="https://www.eisriesenwelt.at/">Eisriesenwelt</a> ·
+<a class="wl" target="_blank" rel="noopener" href="https://www.hellbrunn.at/">Hellbrunn Wasserspiele</a> ·
+<a class="wl" target="_blank" rel="noopener" href="https://www.hausdernatur.at/en/hours-and-prices.html">Haus der Natur</a></li>
+<li><a class="wl" target="_blank" rel="noopener" href="https://www.bmw-welt.com/">BMW Welt</a> ·
+<a class="wl" target="_blank" rel="noopener" href="https://www.muenchen.de/verkehr/autos/umweltzone-und-diesel-fahrverbot-muenchen-alle-infos">München Umweltzone</a> ·
+<a class="wl" target="_blank" rel="noopener" href="https://www.umwelt-plakette.de/">plakett rendelés</a></li>
+<li><a class="wl" target="_blank" rel="noopener" href="https://www.asfinag.at/">Osztrák vignetta (ASFINAG)</a> ·
+<a class="wl" target="_blank" rel="noopener" href="https://ematrica.nemzetiutdij.hu/">Magyar e-matrica</a></li>
+</ul></div>
+</section>
+
+<footer>
+<h4>Képek — forrás és licenc</h4>
+<p>Minden kép a Wikimedia Commonsról, szabad licenc alatt. Szerző · licenc:</p>
+<ul>
+<li><a href="https://commons.wikimedia.org/wiki/File:Hohensalzburg_Fortress_(50389202238).jpg">Festung Hohensalzburg</a> — Kent Wang · CC BY-SA 2.0</li>
+<li><a href="https://commons.wikimedia.org/wiki/File:Salzburg_Altstadt_Panorama_20170409_02.jpg">Salzburg óváros</a> — Uoaei1 · CC BY-SA 4.0</li>
+<li><a href="https://commons.wikimedia.org/wiki/File:Mirabellgarten_Salzburg_2023-09-28_01.jpg">Mirabell-kert</a> — Leonhard Lenz · CC0</li>
+<li><a href="https://commons.wikimedia.org/wiki/File:Salzbergwerk-Berchtesgaden.jpg">Salzbergwerk Berchtesgaden</a> — Nicolai Schäfer (Nize) · CC BY-SA 3.0</li>
+<li><a href="https://commons.wikimedia.org/wiki/File:20190129_K%C3%B6nigssee_0097_(40425398113).jpg">Königssee</a> — Ray Swi-hymn · CC BY-SA 2.0</li>
+<li><a href="https://commons.wikimedia.org/wiki/File:Eisriesenwelt,_Macizos_de_Tennen,_Austria,_2019-05-18,_DD_58.jpg">Eisriesenwelt</a> — Diego Delso · CC BY-SA 4.0</li>
+<li><a href="https://commons.wikimedia.org/wiki/File:Marktplatz_Hallstatt_Oberoesterreich.jpg">Hallstatt</a> — Zeitblick · CC BY-SA 3.0</li>
+<li><a href="https://commons.wikimedia.org/wiki/File:BMW_Welt_Night.jpg">BMW Welt</a> — Richard Bartz · CC BY-SA 2.5</li>
+<li><a href="https://commons.wikimedia.org/wiki/File:Eisbach_Surfer3.JPG">Eisbach szörfösök</a> — Martin Falbisoner · CC BY-SA 3.0</li>
+<li><a href="https://commons.wikimedia.org/wiki/File:Rathaus_and_Marienplatz_from_Peterskirche_-_August_2006.jpg">Marienplatz</a> — Diliff · CC BY-SA 3.0</li>
+<li><a href="https://commons.wikimedia.org/wiki/File:M%C3%BCnchen_Panorama-CN.jpg">München panoráma</a> — David Kostner / Steffen Schmitz (Carschten) · CC BY-SA 2.0 DE</li>
+</ul>
+<p class="made">Nyitvatartások és árak a 2026. szeptemberi állapot szerint — indulás előtt ellenőrizd őket.</p>
+</footer>
+
+</div>
+
+<script>
+(function(){
+  var nav = document.querySelectorAll('nav.menu a');
+  var views = document.querySelectorAll('section.view');
+  function show(id){
+    nav.forEach(function(a){ a.classList.toggle('active', a.dataset.view === id); });
+    views.forEach(function(v){ v.classList.toggle('active', v.id === id); });
+    window.scrollTo({top:0, behavior:'smooth'});
+  }
+  nav.forEach(function(a){ a.addEventListener('click', function(){ show(a.dataset.view); }); });
+  show('att'); // keep nav and sections consistent regardless of hardcoded classes
+
+  var pills = document.querySelectorAll('.daypill');
+  var days = document.querySelectorAll('.dayview');
+  pills.forEach(function(p){ p.addEventListener('click', function(){
+    pills.forEach(function(x){ x.classList.toggle('active', x === p); });
+    days.forEach(function(d){ d.classList.toggle('active', d.id === p.dataset.day); });
+  }); });
+
+  // checklist with per-browser persistence
+  document.querySelectorAll('ul.check').forEach(function(ul){
+    var g = ul.dataset.group || 'x';
+    ul.querySelectorAll('li').forEach(function(li, i){
+      var key = 'muc26.' + g + '.' + i;
+      try { if (localStorage.getItem(key) === '1') li.classList.add('done'); } catch(e){}
+      li.addEventListener('click', function(){
+        li.classList.toggle('done');
+        try { localStorage.setItem(key, li.classList.contains('done') ? '1' : '0'); } catch(e){}
+      });
+    });
+  });
+})();
+</script>
+</body>
+</html>
